@@ -207,8 +207,16 @@ export default function App() {
     });
 
     ctx.fillStyle = frame.isDark ? "rgba(255,255,255,0.4)" : "rgba(161, 161, 170, 0.8)";
-    ctx.font = `900 ${(isGrid ? 22 : 18) * (canvas.width / 400)}px sans-serif`; ctx.textAlign = "center";
-    ctx.fillText(`❤ MY PHOTOBOX 2024`, canvas.width / 2, canvas.height - (40 * scale));
+    ctx.textAlign = "center";
+    
+    ctx.font = `${14 * scale}px serif`;
+    ctx.fillText("❤", canvas.width / 2, canvas.height - (75 * scale));
+    
+    ctx.font = `bold ${10 * scale}px sans-serif`;
+    ctx.fillText("I LOVE YOU TO THE MOON", canvas.width / 2, canvas.height - (55 * scale));
+    
+    ctx.font = `${8 * scale}px sans-serif`;
+    ctx.fillText("forever", canvas.width / 2, canvas.height - (40 * scale));
 
     const dataUrl = canvas.toDataURL('image/png');
     const link = document.createElement('a'); link.download = `PHBX-${Date.now()}.png`;
